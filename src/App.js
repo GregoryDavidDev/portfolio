@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header";
+import LandingPage from "./components/pages/LandingPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="text-3xl font-light">
-          Hello world!
-        </h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="page">
+            <Header/>
+            <div className="page-container">
+                <LandingPage/>
+                <LandingPage/>
+            </div>
+        </div>
+    );
 }
 
 export default App;

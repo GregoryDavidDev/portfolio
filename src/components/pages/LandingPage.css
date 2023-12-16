@@ -1,0 +1,24 @@
+.cta-box {
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.cta-box-part {
+    flex: 1;
+}
+
+.cta-box-left {
+
+}
+
+.cta-box-right {
+
+}
+
+.project-shelf {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}

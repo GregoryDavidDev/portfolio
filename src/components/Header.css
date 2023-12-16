@@ -1,0 +1,10 @@
+.header {
+    backdrop-filter: blur();
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    padding-left: 40px;
+    padding-right: 40px;
+}

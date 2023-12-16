@@ -1,0 +1,17 @@
+.cursor-line {
+    font-style: normal;
+    animation: cursor-line-blink infinite 1s linear;
+    user-select: none;
+}
+
+@keyframes cursor-line-blink {
+    0% {
+        color: black;
+    }
+    50% {
+        color: white;
+    }
+    100% {
+        color: black;
+    }
+}
