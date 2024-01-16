@@ -3,7 +3,11 @@ import React, { useState } from 'react';
 import {pantheonBaseUrl} from "../lib/pantheon";
 
 function ProjectCard({project}) {
-    return <div className="project-card">
+    function onCardClick(element) {
+        window.location = "https://google.com";
+    }
+
+    return <div className="project-card" onClick={onCardClick}>
         <div className="inner">
             <div className="covers">
                 <img className="cover cover-back" src={`${pantheonBaseUrl}/project/${project.slug}/cover`}/>

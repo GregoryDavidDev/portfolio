@@ -30,6 +30,7 @@
     background: #FFFFFF22;
     transform: none;
     transition: 0.25s;
+    cursor: pointer;
 }
 
 .project-card:hover .cover-fit {

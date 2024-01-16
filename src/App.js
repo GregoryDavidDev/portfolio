@@ -8,7 +8,6 @@ function App() {
             <Header/>
             <div className="page-container">
                 <LandingPage/>
-                <LandingPage/>
             </div>
         </div>
     );
