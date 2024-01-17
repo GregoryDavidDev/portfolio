@@ -83,10 +83,16 @@
 .infos > p {
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 15px;
 }
 
 .infos > .project-title {
     font-weight: 600;
+}
+
+.tags-box {
+    display: flex;
+    gap: 5px;
 }
 
 @keyframes wiggle {

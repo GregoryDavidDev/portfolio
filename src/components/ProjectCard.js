@@ -1,10 +1,11 @@
 import './ProjectCard.css'
 import React, { useState } from 'react';
 import {pantheonBaseUrl} from "../lib/pantheon";
+import TagElement from "./TagElement";
 
 function ProjectCard({project}) {
     function onCardClick(element) {
-        window.location = "https://google.com";
+        window.open(project.url);
     }
 
     return <div className="project-card" onClick={onCardClick}>
@@ -15,6 +16,14 @@ function ProjectCard({project}) {
             </div>
             <div className="infos">
                 <p className="project-title">{project.name}</p>
+                <div className="tags-box">
+                    <TagElement name={project.language}/>
+                    {
+                        project.tags.map((answer, i) => {
+                          return (<TagElement name={answer}/>)
+                        })
+                    }
+                </div>
                 <p>{project.summary}</p>
             </div>
         </div>

@@ -2,7 +2,7 @@ import './Header.css'
 
 function Header() {
     return <div className="header">
-        <p className="">Mon portfolio</p>
+        <p className="">Grégory DAVID</p>
     </div>
 }
 
