@@ -1,25 +1,37 @@
 import ProjectCard from "./ProjectCard";
 import {useEffect, useState} from "react";
-import {fetchPantheonProjects} from  '../lib/pantheon'
+import {fetchPantheonProjects, fetchPantheonProjectsByCategory} from '../lib/pantheon'
 
-function ProjectShelf() {
+function ProjectShelf({category}) {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        fetchPantheonProjects()
-            .then(async data => {
-                setProjects(await data.json())
-            })
-    }, []);
+        if (category === undefined) {
+            fetchPantheonProjects()
+                .then(async data => {
+                    setProjects(await data.json())
+                })
+        } else {
+            fetchPantheonProjectsByCategory(category)
+                .then(async data => {
+                    setProjects(await data.json())
+                })
+        }
+    }, [category]);
 
-    if (projects.length < 3) {
+    if (projects.length === 0) {
         return <p>Loading</p>
     }
 
+    let finalArray = projects;
+    if (finalArray.length > 3) finalArray = projects.slice(0, 3);
+
     return <div className="project-shelf">
-        <ProjectCard project={projects[0]}/>
-        <ProjectCard project={projects[1]}/>
-        <ProjectCard project={projects[2]}/>
+        {
+            finalArray.map((project, i) => {
+                return (<ProjectCard project={project}/>)
+            })
+        }
     </div>
 }
 

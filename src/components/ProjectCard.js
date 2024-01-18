@@ -5,10 +5,12 @@ import TagElement from "./TagElement";
 
 function ProjectCard({project}) {
     function onCardClick(element) {
+        if (project.url === undefined || project.url.length === 0) return;
+
         window.open(project.url);
     }
 
-    return <div className="project-card" onClick={onCardClick}>
+    return <div className="project-card wiggle" onClick={onCardClick}>
         <div className="inner">
             <div className="covers">
                 <img className="cover cover-back" src={`${pantheonBaseUrl}/project/${project.slug}/cover`}/>

@@ -17,18 +17,21 @@
     transition: 0.25s;
 }
 
-.project-card:nth-child(odd) {
+.wiggle:nth-child(odd) {
     animation: wiggle 10s infinite ease-in-out;
 }
 
-.project-card:nth-child(even) {
+.wiggle:nth-child(even) {
     animation: wiggle-alt 10s infinite ease-in-out;
 }
 
-.project-card:hover {
+.wiggle:hover {
     animation-play-state: paused;
-    background: #FFFFFF22;
     transform: none;
+}
+
+.project-card:hover {
+    background: #FFFFFF22;
     transition: 0.25s;
     cursor: pointer;
 }

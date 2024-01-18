@@ -5,3 +5,22 @@
     align-items: center;
     justify-content: center;
 }
+
+.cta-box {
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.cta-box-part {
+    flex: 1;
+}
+
+.cta-box-left {
+    margin-right: 10px;
+}
+
+.cta-box-right {
+
+}

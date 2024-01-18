@@ -1,0 +1,119 @@
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    overflow: hidden;
+    z-index: -10;
+}
+
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 92, 92, 0.2);
+    animation: animate 19s linear infinite;
+}
+
+.background li:nth-child(odd) {
+    background: rgb(236, 151, 67, 0.2);
+}
+
+.background li:nth-child(0) {
+    left: 61%;
+    width: 122px;
+    height: 122px;
+    bottom: -122px;
+    animation-delay: 1s;
+}
+
+.background li:nth-child(1) {
+    left: 1%;
+    width: 153px;
+    height: 153px;
+    bottom: -153px;
+    animation-delay: 2s;
+}
+
+.background li:nth-child(2) {
+    left: 49%;
+    width: 115px;
+    height: 115px;
+    bottom: -115px;
+    animation-delay: 1s;
+}
+
+.background li:nth-child(3) {
+    left: 56%;
+    width: 100px;
+    height: 100px;
+    bottom: -100px;
+    animation-delay: 8s;
+}
+
+.background li:nth-child(4) {
+    left: 68%;
+    width: 187px;
+    height: 187px;
+    bottom: -187px;
+    animation-delay: 5s;
+}
+
+.background li:nth-child(5) {
+    left: 11%;
+    width: 104px;
+    height: 104px;
+    bottom: -104px;
+    animation-delay: 13s;
+}
+
+.background li:nth-child(6) {
+    left: 83%;
+    width: 166px;
+    height: 166px;
+    bottom: -166px;
+    animation-delay: 20s;
+}
+
+.background li:nth-child(7) {
+    left: 2%;
+    width: 142px;
+    height: 142px;
+    bottom: -142px;
+    animation-delay: 10s;
+}
+
+.background li:nth-child(8) {
+    left: 7%;
+    width: 147px;
+    height: 147px;
+    bottom: -147px;
+    animation-delay: 27s;
+}
+
+.background li:nth-child(9) {
+    left: 84%;
+    width: 189px;
+    height: 189px;
+    bottom: -189px;
+    animation-delay: 1s;
+}
