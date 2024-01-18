@@ -53,3 +53,30 @@ p {
   transition: 0.25s;
   transition-property: color, background-color, outline-color;
 }
+
+::selection {
+  color: white;
+  background-color: rgba(255, 92, 92, 0.2);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 92, 92);
+}
