@@ -1,6 +1,6 @@
 .project-card {
-    border: 2px solid white;
-    background: #FFFFFF11;
+    outline: 1px solid #FFFFFF33;
+    background: linear-gradient(#FFFFFF00, #FFFFFF22);
     backdrop-filter: blur(2px);
 
     width: 240px;
@@ -31,7 +31,11 @@
 }
 
 .project-card:hover {
-    background: #FFFFFF22;
+    outline: 1px solid #FFFFFF66;
+    background: linear-gradient(#FFFFFF22, #FFFFFF33);
+
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 40);
+
     transition: 0.25s;
     cursor: pointer;
 }

@@ -5,6 +5,8 @@ import Cursor from "../Cursor";
 import ProjectCard from "../ProjectCard";
 import ProjectShelf from "../ProjectShelf";
 import MyselfCardShelf from "../MyselfCardShelf";
+import { useSpring, animated } from '@react-spring/web'
+import GlassButton from "../GlassButton";
 
 function IntroductionPage() {
     function scrollToProjectsFunctionGen(location) {
@@ -21,9 +23,9 @@ function IntroductionPage() {
                 <p>Je suis passionné d'informatique depuis toujours, et je fais du développement de logiciels et de jeux dans mon temps libre.</p>
                 <p>Le C# est mon langage de prédilection depuis mes débuts dans la programmation.</p>
                 <div className="buttons-area">
-                    <button className="button-primary" onClick={scrollToProjectsFunctionGen("game")}>Voir mes jeux</button>
-                    <button className="button-primary" onClick={scrollToProjectsFunctionGen("native")}>Voir mes applis</button>
-                    <button className="button-primary" onClick={scrollToProjectsFunctionGen("web")}>Voir mes projets web</button>
+                    <GlassButton text="Voir mes jeux" delay={0.1} callback={scrollToProjectsFunctionGen("game")}></GlassButton>
+                    <GlassButton text="Voir mes applis" delay={0.25} callback={scrollToProjectsFunctionGen("native")}></GlassButton>
+                    <GlassButton text="Voir mes projets web" delay={0.4} callback={scrollToProjectsFunctionGen("web")}></GlassButton>
                 </div>
             </div>
             <div className="cta-box-part cta-box-right">
