@@ -7,4 +7,13 @@
     flex-direction: row;
     padding-left: 40px;
     padding-right: 40px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.hz-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }

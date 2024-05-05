@@ -7,6 +7,7 @@ import ProjectShelf from "../ProjectShelf";
 import MyselfCardShelf from "../MyselfCardShelf";
 import { useSpring, animated } from '@react-spring/web'
 import GlassButton from "../GlassButton";
+import Popup from "reactjs-popup";
 
 function IntroductionPage() {
     function scrollToProjectsFunctionGen(location) {
