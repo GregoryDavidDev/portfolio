@@ -2,6 +2,7 @@ import Popup from "reactjs-popup";
 import React from 'react';
 import GlassButton from "./GlassButton";
 import "./ContactPopupButton.css"
+import ReCAPTCHA from "react-google-recaptcha";
 
 export function ContactPopupButton() {
     return (
@@ -14,17 +15,20 @@ export function ContactPopupButton() {
                     <div className="content">
                         <h2>Me contacter</h2>
                         <p>Vous pouvez me contacter directement via ce formulaire ci-dessous. Je vous répondrerai ultérieurement à l'email fourni.</p>
-                        <form className="column-form">
-                            <input className="text-field rounded-options-up" placeholder="Votre nom et/ou nom d'entreprise"/>
-                            <input className="text-field" type="email" placeholder="Contact (email)"/>
-                            <textarea className="text-field rounded-options-down" placeholder="Votre message"></textarea>
+                        <form id="contact-form" action="https://localhost:7228/api/pantheon/messages/form?redirectTo=http://localhost:3000/portfolio" method="post" className="column-form">
+                            <input name="name" min="2" className="text-field rounded-options-up" placeholder="Votre nom et/ou nom d'entreprise" required/>
+                            <input name="email" className="text-field" type="email" placeholder="Contact (email)" required/>
+                            <textarea name="message" className="text-field rounded-options-down" placeholder="Votre message" required></textarea>
+                            <div className="captcha">
+                                <ReCAPTCHA sitekey="6Le6QtEpAAAAAG37ddHVxW4fI-REdosLJD5RggYq" onChange={onCaptchaChange} theme="dark"/>
+                            </div>
                             <p className="small-legal-text">En cliquant sur envoyer, votre message et vos informations
-                                seront envoyés vers mes serveurs et stockés jusqu'à sa lecture par moi-même. Vos
+                                seront envoyés vers mes serveurs et stockés jusqu'à leur lecture par moi-même. Vos
                                 informations ne seront pas communiquées à des tiers et resterons privées.</p>
                         </form>
                     </div>
                     <div className="actions">
-                        <button className="button-primary" onClick={close}>
+                        <button id="send-button" className="button-primary not-interactable" onClick={sendContactMessage}>
                             Envoyer
                         </button>
                         <button className="button-primary" onClick={close}>
@@ -35,4 +39,14 @@ export function ContactPopupButton() {
             )}
         </Popup>
     )
+}
+
+function onCaptchaChange(token) {
+    let sendButton = document.getElementById("send-button");
+    sendButton.classList.remove("not-interactable");
+}
+
+function sendContactMessage() {
+    let form = document.getElementById("contact-form");
+    form.requestSubmit();
 }

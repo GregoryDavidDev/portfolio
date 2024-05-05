@@ -95,3 +95,13 @@
 [data-popup='tooltip'].popup-overlay {
     background: transparent;
 }
+
+.captcha {
+    align-self: start;
+}
+
+.not-interactable {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
