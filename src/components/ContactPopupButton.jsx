@@ -3,6 +3,7 @@ import React from 'react';
 import GlassButton from "./GlassButton";
 import "./ContactPopupButton.css"
 import ReCAPTCHA from "react-google-recaptcha";
+import {pantheonBaseUrl} from "../lib/pantheon";
 
 export function ContactPopupButton() {
     return (
@@ -15,7 +16,7 @@ export function ContactPopupButton() {
                     <div className="content">
                         <h2>Me contacter</h2>
                         <p>Vous pouvez me contacter directement via ce formulaire ci-dessous. Je vous répondrerai ultérieurement à l'email fourni.</p>
-                        <form id="contact-form" action="https://localhost:7228/api/pantheon/messages/form?redirectTo=http://localhost:3000/portfolio" method="post" className="column-form">
+                        <form id="contact-form" action={pantheonBaseUrl + "/messages/form?redirectTo=https://gregorydaviddev.github.io/portfolio"} method="post" className="column-form">
                             <input name="name" min="2" className="text-field rounded-options-up" placeholder="Votre nom et/ou nom d'entreprise" required/>
                             <input name="email" className="text-field" type="email" placeholder="Contact (email)" required/>
                             <textarea name="message" className="text-field rounded-options-down" placeholder="Votre message" required></textarea>
