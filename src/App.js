@@ -1,4 +1,5 @@
 import './App.css';
+import ReCAPTCHA from "react-google-recaptcha";
 import Header from "./components/Header";
 import ProjectsGamesPage from "./components/pages/ProjectsGamesPage";
 import IntroductionPage from "./components/pages/IntroductionPage";
@@ -13,9 +14,9 @@ function App() {
             <Header/>
             <div className="page-container">
                 <IntroductionPage/>
-                <ProjectsGamesPage/>
-                <ProjectsNativesPage/>
                 <ProjectsWebPage/>
+                <ProjectsNativesPage/>
+                <ProjectsGamesPage/>
             </div>
         </div>
     );

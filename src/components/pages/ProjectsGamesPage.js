@@ -8,8 +8,8 @@ function ProjectsGamesPage() {
     return <div id="projects-game" className="page-base">
         <div className="cta-box">
             <div className="cta-box-part cta-box-left">
-                <h1 className="text-title">Voici quelques-uns de <b>mes jeux</b><Cursor/></h1>
-                <p>Étant passionné des jeux multijoueurs et des jeux qui racontent une histoire, je développe sans cesse dans mon temps libre ces types de jeux pour encore mieux connaitre le langage C# et le moteur Unity (si utilisé).</p>
+                <h1 className="text-title">Enfin, voici <b>mes jeux</b><Cursor/></h1>
+                <p>Ces projets sont principalement secondaires mais tout aussi passionnants à faire. J'ai principalement utilisé Unity et le langage C# pour ceux-ci.</p>
             </div>
             <div className="cta-box-part cta-box-right">
                 <ProjectShelf/>

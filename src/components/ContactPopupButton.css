@@ -1,0 +1,107 @@
+.popup-content {
+    margin: auto;
+    color: white;
+    font-weight: 300;
+    background: #141414FF;
+    border-radius: 8px;
+    width: 600px;
+    padding: 5px;
+    outline: 1px solid #FFFFFF33;
+    animation: popup-show 0.4s forwards;
+}
+
+.content > h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.content > p {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.column-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.column-form > p {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.column-form > input, .column-form > textarea {
+    width: 98.5%;
+    min-width: 98.5%;
+    max-width: 98.5%;
+}
+
+@keyframes popup-show {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.small-legal-text {
+    font-size: 13px;
+    opacity: 0.5;
+    margin-top: 5px;
+}
+
+.close {
+    position: absolute;
+    background: none;
+    border: none;
+    color: white;
+    align-self: end;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 2px;
+    padding: 2px 7px;
+}
+
+.modal {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.popup-arrow {
+    color: rgb(255, 255, 255);
+}
+
+[role='tooltip'].popup-content {
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+}
+
+[data-popup='tooltip'].popup-overlay {
+    background: transparent;
+}
+
+.captcha {
+    align-self: start;
+}
+
+.not-interactable {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}

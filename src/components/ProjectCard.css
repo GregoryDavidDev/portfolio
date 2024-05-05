@@ -34,7 +34,7 @@
     outline: 1px solid #FFFFFF66;
     background: linear-gradient(#FFFFFF22, #FFFFFF33);
 
-    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 40);
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.25);
 
     transition: 0.25s;
     cursor: pointer;
