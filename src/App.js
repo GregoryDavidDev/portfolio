@@ -6,8 +6,20 @@ import IntroductionPage from "./components/pages/IntroductionPage";
 import ProjectsNativesPage from "./components/pages/ProjectsNativesPage";
 import ProjectsWebPage from "./components/pages/ProjectsWebPage";
 import Background from "./components/Background";
+import Popup from "reactjs-popup";
+import {SuccessPopup} from "./components/SuccessPopup";
 
 function App() {
+    const queryParameters = new URLSearchParams(window.location.search)
+    const success = queryParameters.get("success") === "true"
+
+    window.addEventListener("scroll", _ => {
+        let header = document.getElementById('header')
+
+        if (window.scrollY) header.classList.add('header-over-elements')
+        else header.classList.remove('header-over-elements')
+    })
+
     return (
         <div className="page">
             <Background/>
@@ -18,6 +30,7 @@ function App() {
                 <ProjectsNativesPage/>
                 <ProjectsGamesPage/>
             </div>
+            <SuccessPopup open={success ?? false}></SuccessPopup>
         </div>
     );
 }

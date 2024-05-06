@@ -23,16 +23,16 @@ export function ContactPopupButton() {
                             <div className="captcha">
                                 <ReCAPTCHA sitekey="6Le6QtEpAAAAAG37ddHVxW4fI-REdosLJD5RggYq" onChange={onCaptchaChange} theme="dark"/>
                             </div>
-                            <p className="small-legal-text">En cliquant sur envoyer, votre message et vos informations
+                            <p className="small-legal-text">En cliquant sur Envoyer, votre message et vos informations
                                 seront envoyés vers mes serveurs et stockés jusqu'à leur lecture par moi-même. Vos
-                                informations ne seront pas communiquées à des tiers (à l'exception de Firebase pour l'envoi de notifications) et resterons privées.</p>
+                                informations ne seront pas communiquées à des tiers (à l'exception de Firebase pour l'envoi de notifications) et resteront privées.</p>
                         </form>
                     </div>
                     <div className="actions">
                         <button id="send-button" className="button-primary not-interactable" onClick={sendContactMessage}>
                             Envoyer
                         </button>
-                        <button className="button-primary" onClick={close}>
+                        <button className="button-secondary" onClick={close}>
                             Annuler
                         </button>
                     </div>

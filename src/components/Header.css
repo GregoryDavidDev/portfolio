@@ -1,5 +1,4 @@
 .header {
-    backdrop-filter: blur();
     position: fixed;
     left: 0;
     right: 0;
@@ -12,8 +11,14 @@
     z-index: 10;
 }
 
+.header-over-elements {
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid #FFFFFF22;
+}
+
 .hz-flex {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    align-items: center;
 }

@@ -8,7 +8,7 @@ function GlassButton({callback, text, delay}) {
     })
 
     return <animated.div style={{...springs}}>
-        <button className="button-primary" onClick={callback}>
+        <button className="button-secondary" onClick={callback}>
             {text}
         </button>
     </animated.div>

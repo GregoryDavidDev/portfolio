@@ -64,6 +64,12 @@
     font-size: 20px;
     border-radius: 2px;
     padding: 2px 7px;
+    transition: background 0.2s;
+}
+
+.close:hover {
+    background: #FFFFFF22;
+    transition: background 0.2s;
 }
 
 .modal {

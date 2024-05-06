@@ -3,8 +3,11 @@ import GlassButton from "./GlassButton";
 import {ContactPopupButton} from "./ContactPopupButton";
 
 function Header() {
-    return <div className="header">
-        <p className="">Grégory DAVID</p>
+    return <div id="header" className="header">
+        <div className="hz-flex">
+            <p className="">Grégory DAVID</p>
+            <p className="badge glint">Portfolio</p>
+        </div>
         <div className="hz-flex">
             <ContactPopupButton/>
         </div>
