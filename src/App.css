@@ -8,7 +8,7 @@ body {
 }
 
 p {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .App-logo {
@@ -20,7 +20,9 @@ p {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  overflow-x: hidden;
+  overflow: hidden;
+  width: 50vw;
+  margin: 0 auto;
 }
 
 .text-title {
@@ -30,6 +32,18 @@ p {
 
 .text-title > b {
   font-weight: 700;
+}
+
+.text-title-bold {
+  font-size: 3vw;
+  padding: 0;
+  margin: 0;
+}
+
+.title-supplement {
+  font-size: 1.2vw;
+  padding: 0;
+  margin: 0;
 }
 
 .button-primary {

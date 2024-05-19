@@ -8,6 +8,8 @@ import ProjectsWebPage from "./components/pages/ProjectsWebPage";
 import Background from "./components/Background";
 import Popup from "reactjs-popup";
 import {SuccessPopup} from "./components/SuccessPopup";
+import SpacerPage from "./components/pages/SpacerPage";
+import {ProjectsPage} from "./components/pages/ProjectsPage";
 
 function App() {
     const queryParameters = new URLSearchParams(window.location.search)
@@ -26,9 +28,8 @@ function App() {
             <Header/>
             <div className="page-container">
                 <IntroductionPage/>
-                <ProjectsWebPage/>
-                <ProjectsNativesPage/>
-                <ProjectsGamesPage/>
+                <SpacerPage/>
+                <ProjectsPage/>
             </div>
             <SuccessPopup open={success ?? false}></SuccessPopup>
         </div>
