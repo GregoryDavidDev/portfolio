@@ -10,6 +10,7 @@ import Popup from "reactjs-popup";
 import {SuccessPopup} from "./components/SuccessPopup";
 import SpacerPage from "./components/pages/SpacerPage";
 import {ProjectsPage} from "./components/pages/ProjectsPage";
+import {AboutMePage} from "./components/pages/AboutMePage";
 
 function App() {
     const queryParameters = new URLSearchParams(window.location.search)
@@ -28,6 +29,8 @@ function App() {
             <Header/>
             <div className="page-container">
                 <IntroductionPage/>
+                <SpacerPage/>
+                <AboutMePage/>
                 <SpacerPage/>
                 <ProjectsPage/>
             </div>
