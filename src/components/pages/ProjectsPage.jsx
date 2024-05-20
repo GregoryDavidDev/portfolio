@@ -9,12 +9,30 @@ export function ProjectsPage() {
     useEffect(() => {
         fetchPantheonProjects()
             .then(async data => {
-                setProjects(await data.json())
+                try {
+                    setProjects(await data.json())
+                } catch (error) {
+
+                }
             })
     }, []);
 
     if (projects.length === 0) {
-        return <p>Loading</p>
+        return <div className="page-base left-header-page">
+            <div className="left-header-text-wrap">
+                <h1 className="left-header-text">PROJETS</h1>
+            </div>
+            <div className="left-header-fill bento-card-container">
+                <div className="bento-card-row">
+                    <ProjectBentoCard skeleton={true} fill={true}/>
+                    <ProjectBentoCard skeleton={true}/>
+                </div>
+                <div className="bento-card-row">
+                    <ProjectBentoCard skeleton={true}/>
+                    <ProjectBentoCard skeleton={true} fill={true}/>
+                </div>
+            </div>
+        </div>
     }
 
     let finalArray = projects;

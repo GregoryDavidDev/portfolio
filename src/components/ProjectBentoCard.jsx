@@ -4,8 +4,10 @@ import TagElement from "./TagElement";
 import React, {useEffect, useState} from "react";
 import {pantheonBaseUrl} from "../lib/pantheon";
 import ColorThief from "colorthief/dist/color-thief";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
-export function ProjectBentoCard({project, fill}) {
+export function ProjectBentoCard({project, fill, skeleton}) {
     const [light, setLight] = useState(false);
 
     function cardClickHandler() {
@@ -17,6 +19,7 @@ export function ProjectBentoCard({project, fill}) {
 
         const colorThief = new ColorThief();
         const image = document.getElementById(`${project.slug}-cover`);
+        if (!image) return
         image.crossOrigin = "Anonymous";
         let color;
 
@@ -40,6 +43,15 @@ export function ProjectBentoCard({project, fill}) {
         });
 
     }, [project]);
+
+    if (skeleton) {
+        return <div className={fill ? "bento-card bento-fill" : "bento-card"}>
+            <div className="bento-card-inside light">
+                <Skeleton></Skeleton>
+                <Skeleton count={4}></Skeleton>
+            </div>
+        </div>
+    }
 
     if (!project) return null;
 

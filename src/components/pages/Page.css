@@ -10,6 +10,10 @@
     margin-top: 15vh;
 }
 
+.page-full {
+    height: 70vh;
+}
+
 .page-fixed-height-medium {
     height: 40vh;
 }
