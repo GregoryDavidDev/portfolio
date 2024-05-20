@@ -6,10 +6,13 @@
     display: flex;
     cursor: pointer;
     transition: background-color 0.5s, filter 0.5s;
+}
+
+.bento-card-animated {
     filter: opacity(0.8);
 }
 
-.bento-card:hover {
+.bento-card-animated:hover {
     filter: opacity(1);
     transition: filter 0.5s;
 }

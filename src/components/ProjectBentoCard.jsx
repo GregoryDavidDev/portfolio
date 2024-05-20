@@ -55,7 +55,7 @@ export function ProjectBentoCard({project, fill, skeleton}) {
 
     if (!project) return null;
 
-    return <div id={project.slug} className={fill ? "bento-card bento-fill" : "bento-card"} onClick={cardClickHandler}>
+    return <div id={project.slug} className={fill ? "bento-card bento-fill bento-card-animated" : "bento-card bento-card-animated"} onClick={cardClickHandler}>
         <div className={light ? "bento-card-inside dark" : "bento-card-inside light"}>
             <p className="title">{project.name}</p>
             <p className="text">{project.summary}</p>
