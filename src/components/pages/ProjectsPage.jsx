@@ -22,7 +22,7 @@ export function ProjectsPage() {
             <div className="left-header-text-wrap">
                 <h1 className="left-header-text">PROJETS</h1>
             </div>
-            <div className="left-header-fill bento-card-container">
+            <div className="left-header-fill bento-card-container-column">
                 <div className="bento-card-row">
                     <ProjectBentoCard skeleton={true} fill={true}/>
                     <ProjectBentoCard skeleton={true}/>
@@ -42,7 +42,7 @@ export function ProjectsPage() {
         <div className="left-header-text-wrap">
             <h1 className="left-header-text">PROJETS</h1>
         </div>
-        <div className="left-header-fill bento-card-container">
+        <div className="left-header-fill bento-card-container-column">
             <div className="bento-card-row">
                 <ProjectBentoCard project={finalArray[0]} fill={true}/>
                 <ProjectBentoCard project={finalArray[1]}/>

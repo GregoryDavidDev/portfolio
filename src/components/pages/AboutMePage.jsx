@@ -12,7 +12,7 @@ export function AboutMePage() {
         <div className="left-header-text-wrap">
             <h1 className="left-header-text">À PROPOS</h1>
         </div>
-        <div className="left-header-fill bento-card-container">
+        <div className="left-header-fill bento-card-container-column">
             <div className="bento-card-row">
                 <TextBentoCard text={abText} fill={true}></TextBentoCard>
                 <ImageBentoCard alt="my face" image={Head} limited={true}/>

@@ -22,15 +22,27 @@
     flex: 1;
 }
 
-.bento-card-container {
+.bento-card-container-column {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+.bento-card-container-row {
+    display: flex;
+    flex-direction: row;
     gap: 10px;
 }
 
 .bento-card-row {
     display: flex;
     flex-direction: row;
+    gap: 10px;
+}
+
+.bento-card-column {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -97,4 +109,8 @@
     height: 10%;
     object-fit: contain;
     pointer-events: none;
+}
+
+.gapped {
+    gap: 10px;
 }

@@ -2,6 +2,7 @@ import Popup from "reactjs-popup";
 import {pantheonBaseUrl} from "../lib/pantheon";
 import ReCAPTCHA from "react-google-recaptcha";
 import React from "react";
+import Cross from "../res/icons/cross.svg";
 
 export function SuccessPopup({open}) {
     return (
@@ -9,7 +10,7 @@ export function SuccessPopup({open}) {
             {close => (
                 <div className="modal">
                     <button className="close" onClick={close}>
-                        &times;
+                        <img src={Cross} alt="Close popup"/>
                     </button>
                     <div className="content">
                         <h2>Merci !</h2>
