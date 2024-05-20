@@ -1,22 +1,61 @@
 import './ProjectBentoCard.css'
 import Default from '../res/cards/default/logo.png'
 import TagElement from "./TagElement";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {pantheonBaseUrl} from "../lib/pantheon";
+import ColorThief from "colorthief/dist/color-thief";
 
 export function ProjectBentoCard({project, fill}) {
+    const [light, setLight] = useState(false);
+
+    function cardClickHandler() {
+        if (project.url) window.open(project.url);
+    }
+
+    useEffect(() => {
+        if (project === null || project === undefined) return;
+
+        const colorThief = new ColorThief();
+        const image = document.getElementById(`${project.slug}-cover`);
+        image.crossOrigin = "Anonymous";
+        let color;
+
+        image.addEventListener('load', function() {
+            if (image === null || colorThief === null) return;
+
+            try {
+                color = colorThief.getColor(image);
+                const rgb = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+                let isLight = color[0] > 128 || color[1] > 128 || color[2] > 128;
+
+                document.getElementById(project.slug).style.backgroundColor = rgb;
+                if (isLight) {
+                    document.getElementById(project.slug).style.outline = "1px solid #00000055";
+                }
+
+                setLight(isLight);
+            } catch (e) {
+
+            }
+        });
+
+    }, [project]);
+
     if (!project) return null;
 
-    return <div className={fill ? "bento-card bento-fill" : "bento-card"}>
-        <div className="bento-card-inside">
+    return <div id={project.slug} className={fill ? "bento-card bento-fill" : "bento-card"} onClick={cardClickHandler}>
+        <div className={light ? "bento-card-inside dark" : "bento-card-inside light"}>
             <p className="title">{project.name}</p>
             <p className="text">{project.summary}</p>
-            <img className="picture" alt="Project cover" src={`${pantheonBaseUrl}/project/${project.slug}/logo`}></img>
+            <img id={`${project.slug}-cover`} className="invisible-cover" alt="Project logo"
+                 src={`${pantheonBaseUrl}/project/${project.slug}/cover`}></img>
+            <img id={`${project.slug}-logo`} className="picture" alt="Project logo"
+                 src={`${pantheonBaseUrl}/project/${project.slug}/logo`}></img>
             <div className="footer">
-                <TagElement name={project.language}/>
+                <TagElement name={project.language} inverted={light}/>
                 {
                     project.tags.map((answer, i) => {
-                        return (<TagElement name={answer}/>)
+                        return (<TagElement name={answer} inverted={light}/>)
                     })
                 }
             </div>

@@ -4,6 +4,8 @@
     height: 40vh;
     min-width: 40%;
     display: flex;
+    cursor: pointer;
+    transition: background-color 0.5s;
 }
 
 .bento-fill {
@@ -30,9 +32,18 @@
     color: white;
 }
 
+.light {
+    color: white;
+}
+
+.dark {
+    color: black;
+}
+
 .bento-card-inside > p {
     margin: 0;
     padding: 0;
+    pointer-events: none;
 }
 
 .bento-card-inside > .title {
@@ -54,8 +65,17 @@
     gap: 10px;
 }
 
+.invisible-cover {
+    position: absolute;
+    visibility: hidden;
+    flex: 1;
+    height: 10%;
+    object-fit: contain;
+}
+
 .picture {
     flex: 1;
     height: 10%;
     object-fit: contain;
+    pointer-events: none;
 }
