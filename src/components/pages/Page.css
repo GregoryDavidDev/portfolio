@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 0 10px;
 }
 
 .page-first {
@@ -29,5 +30,13 @@
 }
 
 .left-header-text {
-    rotate: -90deg;
+    margin: 0;
+    padding: 0;
+    transform: rotate(-90deg) translateX(-290%);
+    pointer-events: none;
+}
+
+.left-header-text-wrap {
+    width: 50px;
+    align-self: stretch;
 }

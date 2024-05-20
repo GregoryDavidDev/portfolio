@@ -1,0 +1,61 @@
+.bento-card {
+    background: red;
+    border-radius: 20px;
+    height: 40vh;
+    min-width: 40%;
+    display: flex;
+}
+
+.bento-fill {
+    flex: 1;
+}
+
+.bento-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bento-card-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.bento-card-inside {
+    margin: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.bento-card-inside > p {
+    margin: 0;
+    padding: 0;
+}
+
+.bento-card-inside > .title {
+    font-weight: 600;
+}
+
+.bento-card-inside > .text {
+    font-weight: 300;
+    min-height: 5rem;
+    max-height: 5rem;
+    text-overflow: ellipsis;
+    text-wrap: wrap;
+    overflow: hidden;
+}
+
+.bento-card-inside > .footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.picture {
+    flex: 1;
+    height: 10%;
+    object-fit: contain;
+}
