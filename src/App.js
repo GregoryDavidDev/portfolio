@@ -13,6 +13,7 @@ import {ProjectsPage} from "./components/pages/ProjectsPage";
 import {AboutMePage} from "./components/pages/AboutMePage";
 import {PassionsPage} from "./components/pages/PassionsPage";
 import {ContactPage} from "./components/pages/ContactPage";
+import {Footer} from "./components/Footer";
 
 function App() {
     const queryParameters = new URLSearchParams(window.location.search)
@@ -40,6 +41,7 @@ function App() {
                 <SpacerPage/>
                 <ContactPage/>
             </div>
+            <Footer/>
             <SuccessPopup open={success ?? false}></SuccessPopup>
         </div>
     );

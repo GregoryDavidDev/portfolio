@@ -6,9 +6,9 @@ import ReCAPTCHA from "react-google-recaptcha";
 import {pantheonBaseUrl} from "../lib/pantheon";
 import Cross from '../res/icons/cross.svg'
 
-export function ContactPopupButton() {
+export function ContactPopupButton({id}) {
     return (
-        <Popup trigger={<button className={"button-primary"}>Me contacter</button>} modal>
+        <Popup trigger={<button id={id} className={"button-primary"}>Me contacter</button>} modal>
             {close => (
                 <div className="modal">
                     <button className="close" onClick={close}>
