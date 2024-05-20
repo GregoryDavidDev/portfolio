@@ -1,18 +1,19 @@
 .popup-content {
     margin: auto;
-    color: white;
+    color: black;
     font-weight: 300;
-    background: #141414FF;
+    background: white;
     border-radius: 8px;
     width: 600px;
     padding: 5px;
-    outline: 1px solid #FFFFFF33;
+    outline: 1px solid #68001311;
     animation: popup-show 0.4s forwards;
 }
 
 .content > h2 {
     margin: 0;
     padding: 0;
+    color: #680013;
 }
 
 .content > p {
@@ -50,20 +51,32 @@
 
 .small-legal-text {
     font-size: 13px;
-    opacity: 0.5;
+    opacity: 0.75;
     margin-top: 5px;
 }
 
 .close {
     position: absolute;
-    background: none;
+    background: #680013;
     border: none;
     color: white;
     align-self: end;
     cursor: pointer;
-    font-size: 20px;
-    border-radius: 2px;
-    padding: 2px 7px;
+    width: 30px;
+    height: 30px;
+    transition: background 0.2s;
+    border-radius: 100%;
+}
+
+.close:hover {
+    background: #9f132e;
+    transition: background 0.2s;
+}
+
+.close > img {
+    transform: scale(1.3);
+    vertical-align: center;
+    horiz-align: center;
 }
 
 .modal {
@@ -88,7 +101,7 @@
 }
 
 .popup-overlay {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(1px);
 }
 

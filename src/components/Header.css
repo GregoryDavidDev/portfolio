@@ -1,5 +1,4 @@
 .header {
-    backdrop-filter: blur();
     position: fixed;
     left: 0;
     right: 0;
@@ -10,10 +9,21 @@
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    height: 60px;
+}
+
+.header-over-elements {
+
 }
 
 .hz-flex {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    align-items: center;
+}
+
+.hz-flex > p {
+    margin: 0;
+    padding: 0;
 }

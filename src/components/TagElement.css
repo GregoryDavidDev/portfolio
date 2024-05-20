@@ -1,15 +1,18 @@
 .tag-container {
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: #FFFFFF11;
-    border: #FFFFFF22 solid 1px;
+    padding: 7px;
+    background-color: white;
+    color: black;
     max-width: fit-content;
     border-radius: 4px;
+}
+
+.inverted {
+    background-color: black;
+    color: white;
 }
 
 .tag-container > p {
     line-height: 0px;
     margin: 5px;
-    font-size: 13px;
+    font-size: 15px;
 }

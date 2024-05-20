@@ -1,26 +1,46 @@
 .page-base {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 0 10px;
 }
 
-.cta-box {
-    width: 80vw;
-    height: 60vh;
+.page-first {
+    margin-top: 15vh;
+}
+
+.page-full {
+    height: 70vh;
+}
+
+.page-fixed-height-medium {
+    height: 40vh;
+}
+
+.page-fixed-height-small {
+    height: 20vh;
+}
+
+.left-header-page {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    font-size: 20px;
+    min-height: 20vh;
 }
 
-.cta-box-part {
+.left-header-fill {
     flex: 1;
 }
 
-.cta-box-left {
-    margin-right: 10px;
+.left-header-text {
+    margin: 0;
+    padding: 0;
+    writing-mode: vertical-lr;
+    user-select: none;
 }
 
-.cta-box-right {
-
+.left-header-text-wrap {
+    width: 50px;
+    align-self: stretch;
 }

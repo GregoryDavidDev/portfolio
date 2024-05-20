@@ -1,0 +1,116 @@
+.bento-card {
+    background: white;
+    border-radius: 20px;
+    height: 40vh;
+    min-width: 40%;
+    display: flex;
+    transition: background-color 0.5s, filter 0.5s;
+    overflow: hidden;
+}
+
+.bento-card-animated {
+    filter: opacity(0.8);
+    cursor: pointer;
+}
+
+.bento-card-animated:hover {
+    filter: opacity(1);
+    transition: filter 0.5s;
+}
+
+.bento-fill {
+    flex: 1;
+}
+
+.bento-card-container-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bento-card-container-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.bento-card-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.bento-card-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bento-card-inside {
+    margin: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.bento-card-inside-fill {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.light {
+    color: white;
+}
+
+.dark {
+    color: black;
+}
+
+.bento-limited {
+    width: 40%;
+}
+
+.bento-card-inside > p {
+    margin: 0;
+    padding: 0;
+}
+
+.bento-card-inside > .title {
+    font-weight: 600;
+}
+
+.bento-card-inside > .text {
+    font-weight: 300;
+    min-height: 5rem;
+    max-height: 5rem;
+    text-overflow: ellipsis;
+    text-wrap: wrap;
+    overflow: hidden;
+}
+
+.bento-card-inside > .footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.invisible-cover {
+    position: absolute;
+    visibility: hidden;
+    flex: 1;
+    height: 10%;
+    object-fit: contain;
+}
+
+.picture {
+    flex: 1;
+    height: 10%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.gapped {
+    gap: 10px;
+}

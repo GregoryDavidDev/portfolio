@@ -6,12 +6,12 @@
 
 @keyframes cursor-line-blink {
     0% {
-        color: black;
+        color: #68001300;
     }
     50% {
-        color: white;
+        color: #680013;
     }
     100% {
-        color: black;
+        color: #68001300;
     }
 }
