@@ -1,7 +1,7 @@
 import {ProjectBentoCard} from "../ProjectBentoCard";
 import {TextBentoCard} from "../TextBentoCard";
 import {ImageBentoCard} from "../ImageBentoCard";
-import Head from '../../res/profile/head_front.png'
+import Head from '../../res/profile/me.png'
 
 const abText = "Je suis passionné d'informatique depuis toujours, et je fais du développement de logiciels et de jeux dans mon temps libre.\n" +
     "\n" +
