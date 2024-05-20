@@ -36,8 +36,8 @@
 .left-header-text {
     margin: 0;
     padding: 0;
-    transform: rotate(-90deg) translateX(-290%);
-    pointer-events: none;
+    writing-mode: vertical-lr;
+    user-select: none;
 }
 
 .left-header-text-wrap {

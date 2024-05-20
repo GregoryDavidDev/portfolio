@@ -33,6 +33,7 @@ function App() {
                 <AboutMePage/>
                 <SpacerPage/>
                 <ProjectsPage/>
+                <SpacerPage/>
             </div>
             <SuccessPopup open={success ?? false}></SuccessPopup>
         </div>
