@@ -6,6 +6,10 @@
     gap: 0 10px;
 }
 
+.page-left {
+    align-items: start;
+}
+
 .page-first {
     margin-top: 15vh;
 }
