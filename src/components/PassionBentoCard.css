@@ -1,0 +1,19 @@
+.passion-bento-card {
+    height: 15vh;
+    justify-items: center;
+    align-items: center;
+}
+
+.centered-title {
+    font-weight: 600;
+    text-align: center;
+}
+
+.centered-small-text {
+    font-size: 15px;
+    text-align: center;
+}
+
+.small-text {
+    font-size: 15px;
+}

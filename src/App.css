@@ -4,11 +4,11 @@ html {
 
 body {
   background: #040404;
-  color: white;
+  color: black;
 }
 
 p {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .App-logo {
@@ -20,7 +20,9 @@ p {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  overflow-x: hidden;
+  overflow: hidden;
+  width: 90vh;
+  margin: 0 auto;
 }
 
 .text-title {
@@ -32,63 +34,66 @@ p {
   font-weight: 700;
 }
 
+.text-title-bold {
+  font-size: 4vw;
+  padding: 0;
+  margin: 0;
+}
+
+.title-supplement {
+  font-size: 1.5vw;
+  padding: 0;
+  margin: 0;
+}
+
 .button-primary {
   padding: 10px 35px;
-  background: linear-gradient(#FFFFFFCC, #FFFFFFAA);
-  color: black;
-  outline: 1px solid #FFFFFF33;
-  border-radius: 4px;
+  background: #680013;
+  color: white;
+  border-radius: 5px;
   border: none;
   font-family: Lexend, sans-serif;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   transition: 0.25s;
   transform: scale(1);
   transition-property: color, background, outline-color, transform;
 }
 
 .button-primary:hover {
-  background: linear-gradient(#FFFFFFFF, #FFFFFFDD);
-  outline: 1px solid #000000;
-  transform: scale(1.02);
+  background: #9f132e;
   cursor: pointer;
-  transition: 0.25s;
-  transition-property: color, background, outline-color, transform;
-  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.25);
 }
 
 .button-secondary {
   padding: 10px 35px;
-  background: linear-gradient(#FFFFFF18, #FFFFFF22);
-  color: white;
-  outline: 1px solid #FFFFFF33;
-  border-radius: 4px;
+  background: #E89893;
+  color: black;
+  border-radius: 5px;
   border: none;
   font-family: Lexend, sans-serif;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
   transition: 0.25s;
   transform: scale(1);
   transition-property: color, background, outline-color, transform;
 }
 
 .button-secondary:hover {
-  background: linear-gradient(#FFFFFF30, #FFFFFF44);
-  outline: 1px solid #FFFFFF66;
-  transform: scale(1.02);
+  background: #f1b3af;
   cursor: pointer;
   transition: 0.25s;
   transition-property: color, background, outline-color, transform;
 }
 
 .text-field {
-  background: #101010FF;
+  background: #FFDFD5;
   padding: 5px;
   border: none;
-  outline: 1px solid #FFFFFF44;
   font-family: Lexend, sans-serif;
   font-weight: 300;
-  color: white;
+  color: #680013;
+  outline: 1px solid #68001333;
 }
 
 .rounded-options-up {
@@ -113,23 +118,24 @@ p {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: black;
+  background: #FFDFD5;
   border-radius: 2px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: white;
+  background: #680013;
   border-radius: 2px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 92, 92);
+  background: #9f132e;
 }
 
 .badge {
   background: white;
+  outline: #00000022 solid 1px;
   color: black;
   padding: 2px 8px;
   border-radius: 4px;
@@ -143,6 +149,10 @@ p {
   -webkit-animation: glint-animation 30s ease infinite;
   -moz-animation: glint-animation 30s ease infinite;
   animation: glint-animation 10s ease infinite;
+}
+
+h1 {
+  color: #680013;
 }
 
 @-webkit-keyframes glint-animation {

@@ -1,15 +1,13 @@
 import './Header.css'
 import GlassButton from "./GlassButton";
 import {ContactPopupButton} from "./ContactPopupButton";
+import {Logo} from "../Logo";
 
 function Header() {
     return <div id="header" className="header">
+        <Logo/>
         <div className="hz-flex">
-            <p className="">Grégory DAVID</p>
-            <p className="badge glint">Portfolio</p>
-        </div>
-        <div className="hz-flex">
-            <ContactPopupButton/>
+            <ContactPopupButton id={"main-contact-button"}/>
         </div>
     </div>
 }

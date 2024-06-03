@@ -9,11 +9,11 @@
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    height: 60px;
 }
 
 .header-over-elements {
-    backdrop-filter: blur(5px);
-    border-bottom: 1px solid #FFFFFF22;
+
 }
 
 .hz-flex {
@@ -21,4 +21,9 @@
     flex-direction: row;
     gap: 10px;
     align-items: center;
+}
+
+.hz-flex > p {
+    margin: 0;
+    padding: 0;
 }

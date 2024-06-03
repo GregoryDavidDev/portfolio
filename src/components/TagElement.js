@@ -1,9 +1,9 @@
 import React from 'react';
 import './TagElement.css'
 
-function TagElement({name}) {
+function TagElement({name, inverted = false}) {
     return (
-        <div className="tag-container"><p>{name}</p></div>
+        <div className={inverted ? "tag-container inverted" : "tag-container"}><p>{name}</p></div>
     );
 }
 
