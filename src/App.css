@@ -38,6 +38,19 @@ p {
   font-size: 4vw;
   padding: 0;
   margin: 0;
+  text-wrap: nowrap;
+  color: #680013;
+  font-weight: 700;
+}
+
+.animated-title {
+  transition: 1s all;
+}
+
+.title-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .title-supplement {
