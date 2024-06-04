@@ -14,6 +14,8 @@ import {AboutMePage} from "./components/pages/AboutMePage";
 import {PassionsPage} from "./components/pages/PassionsPage";
 import {ContactPage} from "./components/pages/ContactPage";
 import {Footer} from "./components/Footer";
+import {useEffect} from "react";
+import {notify} from "./lib/pantheon";
 
 function App() {
     const queryParameters = new URLSearchParams(window.location.search)
@@ -25,6 +27,10 @@ function App() {
         if (window.scrollY) header.classList.add('header-over-elements')
         else header.classList.remove('header-over-elements')
     })
+
+    useEffect(() => {
+        notify('portfolio').then(r => console.log(r))
+    }, []);
 
     return (
         <div className="page">
