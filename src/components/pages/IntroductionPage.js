@@ -11,6 +11,7 @@ import Popup from "reactjs-popup";
 import {ContactPopupButton} from "../ContactPopupButton";
 import TextTransition, {presets} from "react-text-transition";
 import {useEffect, useState} from "react";
+import {notify} from "../../lib/pantheon";
 
 const TEXTS = ['Backend', 'Logiciel', 'C#'];
 
