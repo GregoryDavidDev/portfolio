@@ -33,7 +33,6 @@ function IntroductionPage() {
     }
 
     return <div className="page-base page-first page-fixed-height-medium">
-        <a className="icon-linkedin" href="https://www.linkedin.com/in/gr%C3%A9gory-david-b1732029b/"></a>
         <p className="title-supplement">Je m’appelle Grégory, et je suis étudiant pour devenir</p>
         <div className="title-row">
             <h1 className="text-title-bold">Développeur</h1>

@@ -29,7 +29,7 @@ function App() {
     })
 
     useEffect(() => {
-        notify('portfolio').then(r => console.log(r))
+        notify('portfolio')
     }, []);
 
     return (
