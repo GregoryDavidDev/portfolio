@@ -115,3 +115,11 @@
 .gapped {
     gap: 10px;
 }
+
+.header-text {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    opacity: 0.75;
+    font-weight: 300;
+}

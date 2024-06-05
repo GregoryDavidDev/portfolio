@@ -14,6 +14,19 @@ export function ProjectBentoCard({project, fill, skeleton}) {
         if (project.url) window.open(project.url);
     }
 
+    function getProjectCategoryName(category) {
+        switch (category) {
+            case 'native':
+                return "Une application nommée"
+            case 'web':
+                return "Un service web intitulé"
+            case 'game':
+                return "Un jeu vidéo étant"
+            default:
+                return "Un projet ayant comme nom"
+        }
+    }
+
     useEffect(() => {
         if (project === null || project === undefined) return;
 
@@ -57,6 +70,7 @@ export function ProjectBentoCard({project, fill, skeleton}) {
 
     return <div id={project.slug} className={fill ? "bento-card bento-fill bento-card-animated" : "bento-card bento-card-animated"} onClick={cardClickHandler}>
         <div className={light ? "bento-card-inside dark" : "bento-card-inside light"}>
+            <p className="header-text">{getProjectCategoryName(project.category)}</p>
             <p className="title">{project.name}</p>
             <p className="text">{project.summary}</p>
             <img id={`${project.slug}-cover`} className="invisible-cover" alt="Project logo"
