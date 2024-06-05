@@ -8,9 +8,7 @@ export function fetchPantheonProjectsByCategory(category) {
     return fetch(`${pantheonBaseUrl}/projects/by/${category}`)
 }
 
-export function notify(resource) {
-    return;
-
+export function notify(resource)
     return fetch(`${pantheonBaseUrl}/notify/${resource}`, {
         method: "POST"
     })
